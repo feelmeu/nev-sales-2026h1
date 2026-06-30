@@ -21,8 +21,8 @@
     },
     grid: {
       left: '3%',
-      right: '8%',
-      bottom: '3%',
+      right: '10%',
+      bottom: '8%',
       top: '3%',
       containLabel: true
     },
