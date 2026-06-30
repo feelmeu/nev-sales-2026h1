@@ -20,29 +20,36 @@
       }
     },
     grid: {
-      left: '3%',
-      right: '10%',
-      bottom: '8%',
-      top: '3%',
+      left: '2%',
+      right: '4%',
+      bottom: '2%',
+      top: '6%',
       containLabel: true
     },
     xAxis: {
+      type: 'category',
+      data: [
+        '智己', '蔚来', '上汽', '启源', '埃安',
+        '深蓝', '小米', '长城', '赛力斯', '五菱',
+        '小鹏', '理想', '特斯拉', '零跑', '鸿蒙智行',
+        '极氪', '奇瑞', '吉利', '比亚迪'
+      ],
+      axisLine: { lineStyle: { color: rule } },
+      axisLabel: {
+        color: ink,
+        fontSize: 10,
+        fontWeight: 600,
+        rotate: 38,
+        interval: 0
+      },
+      axisTick: { show: false }
+    },
+    yAxis: {
       type: 'value',
       axisLine: { lineStyle: { color: rule } },
       axisLabel: { color: muted, fontSize: 11 },
-      splitLine: { lineStyle: { color: rule, type: 'dashed' } }
-    },
-    yAxis: {
-      type: 'category',
-      data: [
-        '智己汽车', '蔚来汽车', '上汽乘用车', '长安启源', '广汽埃安',
-        '深蓝汽车', '小米汽车', '长城新能源', '赛力斯', '上汽通用五菱',
-        '小鹏汽车', '理想汽车', '特斯拉中国', '零跑汽车', '鸿蒙智行',
-        '极氪科技', '奇瑞新能源', '吉利银河', '比亚迪'
-      ],
-      axisLine: { lineStyle: { color: rule } },
-      axisLabel: { color: ink, fontSize: 11, fontWeight: 600 },
-      axisTick: { show: false }
+      splitLine: { lineStyle: { color: rule, type: 'dashed' } },
+      max: 230
     },
     series: [{
       type: 'bar',
@@ -67,16 +74,17 @@
         { value: 45.00, itemStyle: { color: accent } },
         { value: 214.60, itemStyle: { color: accent } }
       ],
-      barWidth: '60%',
+      barWidth: '55%',
       label: {
         show: true,
-        position: 'right',
+        position: 'top',
         color: ink,
-        fontSize: 10,
+        fontSize: 9,
         fontFamily: 'IBMPlexMono, monospace',
-        formatter: '{c}'
+        formatter: '{c}',
+        rotate: 38
       },
-      itemStyle: { borderRadius: [0, 4, 4, 0] }
+      itemStyle: { borderRadius: [4, 4, 0, 0] }
     }]
   });
   window.addEventListener('resize', function() { chartSales.resize(); });
