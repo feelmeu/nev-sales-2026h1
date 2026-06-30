@@ -220,6 +220,40 @@ td.bar-cell { width: 100px; }
   vertical-align: super;
 }
 
+/* ===== Model Ranking Table ===== */
+.tag-power {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-family: 'IBMPlexMono', monospace;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.tag-bev { background: rgba(26,138,58,0.12); color: var(--accent); }
+.tag-phev { background: rgba(200,160,46,0.15); color: #8a6d10; }
+.tag-erev { background: rgba(74,58,140,0.12); color: #4a3a8c; }
+.tag-mixed { background: rgba(26,138,58,0.08); color: var(--muted); }
+
+td.model-name { font-weight: 600; }
+td.model-name .mfr {
+  font-size: 0.76rem;
+  font-weight: 400;
+  color: var(--muted);
+  display: block;
+  margin-top: 1px;
+}
+td.price {
+  font-family: 'IBMPlexMono', monospace;
+  font-size: 0.82rem;
+  color: var(--ink);
+  white-space: nowrap;
+}
+td.price .unit {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
 .chart-figure {
   margin: 2rem 0;
 }
@@ -323,7 +357,7 @@ sup a:hover { text-decoration: underline; }
 <header class="cover">
   <div class="eyebrow">行业数据报告</div>
   <h1>2026年上半年全国新能源汽车销量总榜 TOP30</h1>
-  <p class="subtitle">涵盖 TOP30 车企/品牌 1-6 月累计销量、所属企业及总部地理分布,基于中汽协、乘联会及车企官方数据综合整理。</p>
+  <p class="subtitle">涵盖 TOP30 车型销量(含型号、售价、厂商)及 TOP30 车企/品牌 1-6 月累计销量、所属企业及总部地理分布,基于中汽协、乘联会及车企官方数据综合整理。</p>
   <div class="meta">数据区间 2026年1-6月 | 发布日期 2026-06-30</div>
 </header>
 
@@ -354,7 +388,63 @@ sup a:hover { text-decoration: underline; }
 </section>
 
 <section>
-  <h2><span class="num">02</span>销量总榜 TOP 30</h2>
+  <h2><span class="num">02</span>车型销量 TOP 30</h2>
+  <p>下表为 2026 年 1-5 月新能源汽车<strong>车型级别</strong>累计终端零售销量排名,涵盖具体型号、动力类型、售价区间及生产厂商。数据来源:中汽数研、乘联会终端零售数据<sup><a href="#cite-8">[8]</a></sup><sup><a href="#cite-9">[9]</a></sup><sup><a href="#cite-10">[10]</a></sup>。标 <span class="tag-est">估</span> 者为基于月度走势的推算值。</p>
+
+  <div class="table-wrap" style="max-height:800px;">
+    <table>
+      <thead>
+        <tr>
+          <th>排名</th>
+          <th>车型名称</th>
+          <th>生产厂商</th>
+          <th>动力类型</th>
+          <th>售价区间</th>
+          <th style="text-align:right">1-5月累计(辆)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="rank">1</td><td class="model-name">吉利银河星愿<span class="mfr">吉利汽车</span></td><td>吉利汽车</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">6.88&ndash;9.88<span class="unit"> 万</span></td><td class="sales">130,900</td></tr>
+        <tr><td class="rank">2</td><td class="model-name">特斯拉 Model Y<span class="mfr">特斯拉中国</span></td><td>特斯拉(上海)</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">26.39&ndash;36.39<span class="unit"> 万</span></td><td class="sales">110,400</td></tr>
+        <tr><td class="rank">3</td><td class="model-name">理想 i6<span class="mfr">理想汽车</span></td><td>北京车和家</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">24.98&ndash;33.98<span class="unit"> 万</span></td><td class="sales">98,900</td></tr>
+        <tr><td class="rank">4</td><td class="model-name">零跑 A10<span class="mfr">零跑汽车</span></td><td>浙江零跑科技</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">12.98&ndash;16.98<span class="unit"> 万</span></td><td class="sales">~92,000<span class="tag-est">估</span></td></tr>
+        <tr><td class="rank">5</td><td class="model-name">小米 YU7<span class="mfr">小米汽车</span></td><td>小米汽车科技</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">25.00&ndash;33.00<span class="unit"> 万</span></td><td class="sales">90,100</td></tr>
+        <tr><td class="rank">6</td><td class="model-name">蔚来 ES8<span class="mfr">蔚来汽车</span></td><td>蔚来控股</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">49.80&ndash;63.80<span class="unit"> 万</span></td><td class="sales">72,500</td></tr>
+        <tr><td class="rank">7</td><td class="model-name">方程豹 钛7<span class="mfr">比亚迪</span></td><td>比亚迪股份</td><td><span class="tag-power tag-phev">PHEV插混</span></td><td class="price">23.98&ndash;30.98<span class="unit"> 万</span></td><td class="sales">68,700</td></tr>
+        <tr><td class="rank">8</td><td class="model-name">比亚迪 元UP<span class="mfr">比亚迪</span></td><td>比亚迪股份</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">9.68&ndash;11.98<span class="unit"> 万</span></td><td class="sales">64,700</td></tr>
+        <tr><td class="rank">9</td><td class="model-name">小米 SU7<span class="mfr">小米汽车</span></td><td>小米汽车科技</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">21.59&ndash;29.99<span class="unit"> 万</span></td><td class="sales">60,700</td></tr>
+        <tr><td class="rank">10</td><td class="model-name">比亚迪 宋Pro<span class="mfr">比亚迪</span></td><td>比亚迪股份</td><td><span class="tag-power tag-phev">PHEV插混</span></td><td class="price">10.98&ndash;15.98<span class="unit"> 万</span></td><td class="sales">59,700</td></tr>
+        <tr><td class="rank">11</td><td class="model-name">比亚迪 海豚<span class="mfr">比亚迪</span></td><td>比亚迪股份</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">9.98&ndash;12.98<span class="unit"> 万</span></td><td class="sales">56,000</td></tr>
+        <tr><td class="rank">12</td><td class="model-name">特斯拉 Model 3<span class="mfr">特斯拉中国</span></td><td>特斯拉(上海)</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">23.19&ndash;27.19<span class="unit"> 万</span></td><td class="sales">52,400</td></tr>
+        <tr><td class="rank">13</td><td class="model-name">五菱 宏光MINIEV<span class="mfr">上汽通用五菱</span></td><td>上汽通用五菱</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">3.28&ndash;9.99<span class="unit"> 万</span></td><td class="sales">51,900</td></tr>
+        <tr><td class="rank">14</td><td class="model-name">比亚迪 海狮06<span class="mfr">比亚迪</span></td><td>比亚迪股份</td><td><span class="tag-power tag-phev">PHEV插混</span></td><td class="price">12.98&ndash;18.98<span class="unit"> 万</span></td><td class="sales">51,400</td></tr>
+        <tr><td class="rank">15</td><td class="model-name">长安 启源Q05<span class="mfr">长安汽车</span></td><td>重庆长安汽车</td><td><span class="tag-power tag-phev">PHEV插混</span></td><td class="price">9.69&ndash;13.29<span class="unit"> 万</span></td><td class="sales">48,900</td></tr>
+        <tr><td class="rank">16</td><td class="model-name">小鹏 MONA M03<span class="mfr">小鹏汽车</span></td><td>广州小鹏汽车</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">11.98&ndash;15.98<span class="unit"> 万</span></td><td class="sales">46,500</td></tr>
+        <tr><td class="rank">17</td><td class="model-name">比亚迪 海鸥<span class="mfr">比亚迪</span></td><td>比亚迪股份</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">6.98&ndash;8.58<span class="unit"> 万</span></td><td class="sales">45,100</td></tr>
+        <tr><td class="rank">18</td><td class="model-name">名爵 MG4<span class="mfr">上汽集团</span></td><td>上海汽车集团</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">13.98&ndash;18.68<span class="unit"> 万</span></td><td class="sales">42,400</td></tr>
+        <tr><td class="rank">19</td><td class="model-name">比亚迪 秦PLUS<span class="mfr">比亚迪</span></td><td>比亚迪股份</td><td><span class="tag-power tag-mixed">PHEV/BEV</span></td><td class="price">7.98&ndash;17.98<span class="unit"> 万</span></td><td class="sales">42,200</td></tr>
+        <tr><td class="rank">20</td><td class="model-name">极氪 9X<span class="mfr">极氪(吉利)</span></td><td>浙江吉利控股</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">30.00&ndash;45.00<span class="unit"> 万</span></td><td class="sales">39,600</td></tr>
+        <tr><td class="rank">21</td><td class="model-name">问界 M7<span class="mfr">鸿蒙智行(赛力斯)</span></td><td>赛力斯集团</td><td><span class="tag-power tag-erev">EREV增程</span></td><td class="price">24.98&ndash;32.98<span class="unit"> 万</span></td><td class="sales">37,400</td></tr>
+        <tr><td class="rank">22</td><td class="model-name">五菱 缤果S<span class="mfr">上汽通用五菱</span></td><td>上汽通用五菱</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">5.68&ndash;8.58<span class="unit"> 万</span></td><td class="sales">32,100</td></tr>
+        <tr><td class="rank">23</td><td class="model-name">问界 M6<span class="mfr">鸿蒙智行(赛力斯)</span></td><td>赛力斯集团</td><td><span class="tag-power tag-erev">EREV增程</span></td><td class="price">25.98&ndash;33.98<span class="unit"> 万</span></td><td class="sales">~30,000<span class="tag-est">估</span></td></tr>
+        <tr><td class="rank">24</td><td class="model-name">理想 L6<span class="mfr">理想汽车</span></td><td>北京车和家</td><td><span class="tag-power tag-erev">EREV增程</span></td><td class="price">24.98&ndash;27.98<span class="unit"> 万</span></td><td class="sales">~28,000<span class="tag-est">估</span></td></tr>
+        <tr><td class="rank">25</td><td class="model-name">蔚来 ES6<span class="mfr">蔚来汽车</span></td><td>蔚来控股</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">33.80&ndash;52.80<span class="unit"> 万</span></td><td class="sales">~25,000<span class="tag-est">估</span></td></tr>
+        <tr><td class="rank">26</td><td class="model-name">零跑 C10<span class="mfr">零跑汽车</span></td><td>浙江零跑科技</td><td><span class="tag-power tag-mixed">BEV/EREV</span></td><td class="price">12.58&ndash;16.58<span class="unit"> 万</span></td><td class="sales">~24,000<span class="tag-est">估</span></td></tr>
+        <tr><td class="rank">27</td><td class="model-name">比亚迪 元PLUS<span class="mfr">比亚迪</span></td><td>比亚迪股份</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">11.98&ndash;14.98<span class="unit"> 万</span></td><td class="sales">~22,000<span class="tag-est">估</span></td></tr>
+        <tr><td class="rank">28</td><td class="model-name">零跑 C11<span class="mfr">零跑汽车</span></td><td>浙江零跑科技</td><td><span class="tag-power tag-mixed">BEV/EREV</span></td><td class="price">14.98&ndash;20.58<span class="unit"> 万</span></td><td class="sales">~18,000<span class="tag-est">估</span></td></tr>
+        <tr><td class="rank">29</td><td class="model-name">小鹏 G6<span class="mfr">小鹏汽车</span></td><td>广州小鹏汽车</td><td><span class="tag-power tag-bev">BEV纯电</span></td><td class="price">20.99&ndash;27.99<span class="unit"> 万</span></td><td class="sales">~16,000<span class="tag-est">估</span></td></tr>
+        <tr><td class="rank">30</td><td class="model-name">理想 L7<span class="mfr">理想汽车</span></td><td>北京车和家</td><td><span class="tag-power tag-erev">EREV增程</span></td><td class="price">30.98&ndash;37.98<span class="unit"> 万</span></td><td class="sales">~14,000<span class="tag-est">估</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <strong>市场洞察:</strong>吉利银河星愿以 13.09 万辆夺得车型销冠,主打 10 万以内代步纯电市场;特斯拉 Model Y 稳居 20 万以上高端纯电榜首。5 月单月新能源渗透率达 <mark class="key">62.9%</mark>,燃油车首次跌出月度销量前十<sup><a href="#cite-11">[11]</a></sup><sup><a href="#cite-12">[12]</a></sup>。纯电(BEV)车型占据 TOP10 中 8 席,插混(PHEV)以比亚迪为绝对主力,增程(EREV)则由问界与理想双强并立。
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">03</span>销量总榜 TOP 30</h2>
   <p>下表为 2026 年 1-6 月新能源汽车累计销量排名(综合车企官方交付数据与乘联会批发数据),包含品牌、所属企业、总部所在地。标 <span class="tag-est">估</span> 者为基于月度数据推算的估算值<sup><a href="#cite-3">[3]</a></sup><sup><a href="#cite-5">[5]</a></sup><sup><a href="#cite-6">[6]</a></sup><sup><a href="#cite-7">[7]</a></sup>。</p>
 
   <div class="table-wrap">
@@ -413,7 +503,7 @@ sup a:hover { text-decoration: underline; }
 </section>
 
 <section>
-  <h2><span class="num">03</span>企业地理分布</h2>
+  <h2><span class="num">04</span>企业地理分布</h2>
   <p>TOP30 车企总部分布在 <mark class="key">10 个省市</mark>,呈现明显的产业集聚特征。长三角与珠三角仍是新能源产业核心地带,重庆作为西部汽车重镇聚集多家车企<sup><a href="#cite-4">[4]</a></sup>。</p>
 
   <div class="geo-grid">
@@ -465,9 +555,12 @@ sup a:hover { text-decoration: underline; }
 </section>
 
 <section>
-  <h2><span class="num">04</span>数据说明</h2>
+  <h2><span class="num">05</span>数据说明</h2>
   <h3>数据时效与口径</h3>
   <p>本榜单数据区间为 <mark class="key">2026 年 1-6 月</mark>(上半年)。确切数据(无标记)来自车企官方 6 月交付快报;标记 <span class="tag-est">估</span> 的为基于 1-5 月累计与 5 月月度数据推算的估算值,实际数据以车企后续发布为准。榜单综合批发与交付两种口径,不同车企口径可能存在差异。</p>
+
+  <h3>车型销量榜说明</h3>
+  <p>车型销量 TOP30 基于 2026 年 1-5 月终端零售(上险)数据<sup><a href="#cite-8">[8]</a></sup><sup><a href="#cite-9">[9]</a></sup><sup><a href="#cite-10">[10]</a></sup>,与车企榜单的批发/交付口径存在差异。售价区间为官方指导价,终端实际成交价通常有优惠。第 23-30 名部分车型累计销量为基于月度走势的推算(已标注"约"),仅供参考。</p>
 
   <h3>数据来源</h3>
   <p>市场总量数据来自中国汽车工业协会 6 月 10 日发布的 1-5 月产销数据<sup><a href="#cite-1">[1]</a></sup>。车企销量来自多家媒体 7 月 1 日发布的 6 月交付快报汇总<sup><a href="#cite-5">[5]</a></sup>。5 月厂商排名来自乘联会批发数据<sup><a href="#cite-7">[7]</a></sup>。奇瑞上半年数据来自奇瑞集团官方公布<sup><a href="#cite-6">[6]</a></sup>。车企总部信息来自汽车之家整理<sup><a href="#cite-4">[4]</a></sup>。</p>
@@ -507,6 +600,26 @@ sup a:hover { text-decoration: underline; }
       <li id="cite-7">
         <span class="src-title">2026年5月乘用车厂商销量排名深度解析。5月批发TOP10厂商排名,含吉利银河8.17万辆、长城新能源3.04万辆、上汽乘用车等数据。</span>
         <a class="src-url" href="http://m.toutiao.com/group/7655758417646141987/" target="_blank" rel="noopener">http://m.toutiao.com/group/7655758417646141987/</a>
+      </li>
+      <li id="cite-8">
+        <span class="src-title">2026年1-5月纯电乘用车销量榜单汇总。中汽数研/乘联会数据,吉利星愿13.09万辆领跑纯电车型榜。</span>
+        <a class="src-url" href="http://m.toutiao.com/group/7654135392974783039/" target="_blank" rel="noopener">http://m.toutiao.com/group/7654135392974783039/</a>
+      </li>
+      <li id="cite-9">
+        <span class="src-title">1-5月新能源轿车/SUV销量榜出炉。Model Y、星愿均超10万辆,中汽数研终端零售数据。</span>
+        <a class="src-url" href="http://m.toutiao.com/group/7655202359059939891/" target="_blank" rel="noopener">http://m.toutiao.com/group/7655202359059939891/</a>
+      </li>
+      <li id="cite-10">
+        <span class="src-title">2026年1-5月新能源轿车/新能源SUV销量榜。乘联会数据,涵盖BEV/PHEV/EREV各动力类型车型排名。</span>
+        <a class="src-url" href="http://m.toutiao.com/group/7655452780416598562/" target="_blank" rel="noopener">http://m.toutiao.com/group/7655452780416598562/</a>
+      </li>
+      <li id="cite-11">
+        <span class="src-title">车市变天!5月销量TOP10全是新能源,合资燃油车集体熄火。懂车帝/乘联会5月零售数据。</span>
+        <a class="src-url" href="http://m.toutiao.com/group/7649723786279059977/" target="_blank" rel="noopener">http://m.toutiao.com/group/7649723786279059977/</a>
+      </li>
+      <li id="cite-12">
+        <span class="src-title">5月新能源车渗透率62.9%创新高,燃油车首失销量前十。懂车帝5月销量分析。</span>
+        <a class="src-url" href="http://m.toutiao.com/group/7649683388530393615/" target="_blank" rel="noopener">http://m.toutiao.com/group/7649683388530393615/</a>
       </li>
     </ol>
   </div>
