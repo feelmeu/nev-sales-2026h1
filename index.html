@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026年上半年全国新能源汽车销量总榜</title>
+<title>2026年上半年全国新能源汽车销量总榜 TOP30</title>
 <style>
 @font-face {
   font-family: 'WorkSans';
@@ -52,7 +52,6 @@ body {
   padding: 0 1.5rem;
 }
 
-/* ===== Cover ===== */
 .cover {
   padding: 5rem 0 3rem;
   border-bottom: 1px solid var(--rule);
@@ -84,7 +83,6 @@ body {
   font-family: 'IBMPlexMono', monospace;
 }
 
-/* ===== Sections ===== */
 section {
   padding: 2.5rem 0;
   border-bottom: 1px solid var(--rule);
@@ -119,7 +117,6 @@ mark.key {
   font-weight: 600;
 }
 
-/* ===== Stat cards ===== */
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -150,11 +147,10 @@ mark.key {
   margin-top: 0.4rem;
 }
 
-/* ===== Table ===== */
 .table-wrap {
   overflow-x: auto;
   overflow-y: auto;
-  max-height: 600px;
+  max-height: 700px;
   border-radius: 8px;
   border: 1px solid var(--rule);
   margin: 1.5rem 0;
@@ -162,8 +158,8 @@ mark.key {
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
-  min-width: 700px;
+  font-size: 0.88rem;
+  min-width: 800px;
 }
 thead {
   position: sticky;
@@ -175,12 +171,12 @@ th {
   color: var(--bg);
   font-weight: 600;
   text-align: left;
-  padding: 0.75rem 1rem;
-  font-size: 0.82rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
   white-space: nowrap;
 }
 td {
-  padding: 0.7rem 1rem;
+  padding: 0.6rem 1rem;
   border-bottom: 1px solid var(--rule);
   white-space: nowrap;
 }
@@ -203,9 +199,9 @@ td.share {
   color: var(--muted);
   text-align: right;
 }
-td.bar-cell { width: 120px; }
+td.bar-cell { width: 100px; }
 .bar-track {
-  height: 8px;
+  height: 7px;
   background: var(--rule);
   border-radius: 4px;
   overflow: hidden;
@@ -215,8 +211,15 @@ td.bar-cell { width: 120px; }
   background: var(--accent);
   border-radius: 4px;
 }
+.tag-est {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-family: 'IBMPlexMono', monospace;
+  color: var(--accent2);
+  margin-left: 0.3rem;
+  vertical-align: super;
+}
 
-/* ===== Chart ===== */
 .chart-figure {
   margin: 2rem 0;
 }
@@ -227,7 +230,6 @@ td.bar-cell { width: 120px; }
   margin-bottom: 0.75rem;
 }
 
-/* ===== Geo distribution ===== */
 .geo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -256,7 +258,6 @@ td.bar-cell { width: 120px; }
   margin-top: 0.4rem;
 }
 
-/* ===== Callout ===== */
 .callout {
   background: var(--bg2);
   border-left: 4px solid var(--accent2);
@@ -267,7 +268,6 @@ td.bar-cell { width: 120px; }
   color: var(--muted);
 }
 
-/* ===== Sources ===== */
 footer {
   padding: 2.5rem 0 3rem;
   border-top: 1px solid var(--rule);
@@ -320,45 +320,42 @@ sup a:hover { text-decoration: underline; }
 
 <div class="container">
 
-<!-- ===== Cover ===== -->
 <header class="cover">
   <div class="eyebrow">行业数据报告</div>
-  <h1>2026年上半年全国新能源汽车销量总榜</h1>
-  <p class="subtitle">涵盖 TOP10 车企累计销量、品牌所属企业及总部地理分布,基于中汽协与乘联会权威数据。</p>
-  <div class="meta">数据截至 2026年5月 | 发布日期 2026-06-30</div>
+  <h1>2026年上半年全国新能源汽车销量总榜 TOP30</h1>
+  <p class="subtitle">涵盖 TOP30 车企/品牌 1-6 月累计销量、所属企业及总部地理分布,基于中汽协、乘联会及车企官方数据综合整理。</p>
+  <div class="meta">数据区间 2026年1-6月 | 发布日期 2026-06-30</div>
 </header>
 
-<!-- ===== 市场概览 ===== -->
 <section>
   <h2><span class="num">01</span>市场概览</h2>
-  <p>根据中国汽车工业协会 2026 年 6 月 10 日发布的数据,1-5 月新能源汽车产销分别完成 <mark class="key">584.1 万辆</mark> 和 <mark class="key">580.2 万辆</mark>,同比增长 2.5% 和 3.5%,新能源汽车新车销量占汽车新车总销量的 47.5%<sup><a href="#cite-1">[1]</a></sup>。其中 5 月单月新能源汽车销量达 149.6 万辆,渗透率攀升至 <mark class="key">56.9%</mark><sup><a href="#cite-2">[2]</a></sup>,市场已全面进入新能源主导时代。</p>
+  <p>2026 年上半年,中国新能源汽车市场继续高速增长。根据中国汽车工业协会数据,1-5 月新能源汽车产销分别完成 <mark class="key">584.1 万辆</mark> 和 <mark class="key">580.2 万辆</mark>,同比增长 2.5% 和 3.5%,渗透率达 47.5%<sup><a href="#cite-1">[1]</a></sup>。5 月单月新能源汽车销量达 149.6 万辆,渗透率攀升至 <mark class="key">56.9%</mark><sup><a href="#cite-2">[2]</a></sup>。多家车企 6 月销量创历史新高,上半年整体呈现"头部稳固、出口爆发、新势力分化"格局<sup><a href="#cite-5">[5]</a></sup>。</p>
 
   <div class="stat-grid">
     <div class="stat-card">
-      <div class="num">580.2<span class="unit"> 万辆</span></div>
-      <div class="label">1-5月累计销量(批发)</div>
+      <div class="num">580<span class="unit"> 万辆</span></div>
+      <div class="label">1-5月累计销量(中汽协)</div>
     </div>
     <div class="stat-card">
-      <div class="num">397<span class="unit"> 万辆</span></div>
-      <div class="label">国内销量</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">183.3<span class="unit"> 万辆</span></div>
-      <div class="label">出口(同比+110%)</div>
+      <div class="num">183<span class="unit"> 万辆</span></div>
+      <div class="label">1-5月出口(同比+110%)</div>
     </div>
     <div class="stat-card">
       <div class="num">56.9<span class="unit">%</span></div>
       <div class="label">5月单月渗透率</div>
     </div>
+    <div class="stat-card">
+      <div class="num">214.6<span class="unit"> 万辆</span></div>
+      <div class="label">比亚迪上半年销量</div>
+    </div>
   </div>
 
-  <p>分区域看,1-5 月新能源汽车国内销量 397 万辆,同比下降 16.5%;但出口达 183.3 万辆,同比增长 1.1 倍,成为拉动增长的核心引擎<sup><a href="#cite-1">[1]</a></sup>。国内市场承压与海外高速扩张并存,是当前市场的显著特征。</p>
+  <p>出口成为核心增长引擎,1-5 月新能源汽车出口 183.3 万辆,同比增长 1.1 倍<sup><a href="#cite-1">[1]</a></sup>。比亚迪上半年海外销量达 47 万辆,奇瑞集团出口连续三月刷新国内车企纪录<sup><a href="#cite-5">[5]</a></sup><sup><a href="#cite-6">[6]</a></sup>。国内市场承压与国际市场爆发并存,是当前市场最显著的结构性特征。</p>
 </section>
 
-<!-- ===== 销量总榜 ===== -->
 <section>
-  <h2><span class="num">02</span>销量总榜 TOP 10</h2>
-  <p>下表为 2026 年 1-5 月新能源汽车车企累计销量排名(零售口径),包含品牌、所属企业、总部所在地及市场份额<sup><a href="#cite-3">[3]</a></sup>。</p>
+  <h2><span class="num">02</span>销量总榜 TOP 30</h2>
+  <p>下表为 2026 年 1-6 月新能源汽车累计销量排名(综合车企官方交付数据与乘联会批发数据),包含品牌、所属企业、总部所在地。标 <span class="tag-est">估</span> 者为基于月度数据推算的估算值<sup><a href="#cite-3">[3]</a></sup><sup><a href="#cite-5">[5]</a></sup><sup><a href="#cite-6">[6]</a></sup><sup><a href="#cite-7">[7]</a></sup>。</p>
 
   <div class="table-wrap">
     <table>
@@ -368,180 +365,117 @@ sup a:hover { text-decoration: underline; }
           <th>品牌/车企</th>
           <th>所属企业</th>
           <th>总部所在地</th>
-          <th style="text-align:right">累计销量</th>
-          <th style="text-align:right">市场份额</th>
-          <th>占比可视化</th>
+          <th style="text-align:right">1-6月累计</th>
+          <th>占比</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td class="rank">1</td>
-          <td><strong>比亚迪</strong></td>
-          <td>比亚迪股份有限公司</td>
-          <td>广东省深圳市</td>
-          <td class="sales">766,400</td>
-          <td class="share">20.7%</td>
-          <td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></td>
-        </tr>
-        <tr>
-          <td class="rank">2</td>
-          <td><strong>吉利汽车</strong></td>
-          <td>浙江吉利控股集团有限公司</td>
-          <td>浙江省杭州市</td>
-          <td class="sales">470,400</td>
-          <td class="share">12.7%</td>
-          <td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:61%"></div></div></td>
-        </tr>
-        <tr>
-          <td class="rank">3</td>
-          <td><strong>长安汽车</strong></td>
-          <td>重庆长安汽车股份有限公司</td>
-          <td>重庆市</td>
-          <td class="sales">254,800</td>
-          <td class="share">6.9%</td>
-          <td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:33%"></div></div></td>
-        </tr>
-        <tr>
-          <td class="rank">4</td>
-          <td><strong>鸿蒙智行</strong></td>
-          <td>华为技术有限公司</td>
-          <td>广东省深圳市</td>
-          <td class="sales">191,600</td>
-          <td class="share">5.2%</td>
-          <td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:25%"></div></div></td>
-        </tr>
-        <tr>
-          <td class="rank">5</td>
-          <td><strong>零跑汽车</strong></td>
-          <td>浙江零跑科技股份有限公司</td>
-          <td>浙江省杭州市</td>
-          <td class="sales">187,800</td>
-          <td class="share">5.1%</td>
-          <td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:24%"></div></div></td>
-        </tr>
-        <tr>
-          <td class="rank">6</td>
-          <td><strong>特斯拉中国</strong></td>
-          <td>特斯拉(上海)有限公司</td>
-          <td>上海市</td>
-          <td class="sales">186,000</td>
-          <td class="share">5.0%</td>
-          <td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:24%"></div></div></td>
-        </tr>
-        <tr>
-          <td class="rank">7</td>
-          <td><strong>理想汽车</strong></td>
-          <td>北京车和家信息技术有限公司</td>
-          <td>北京市</td>
-          <td class="sales">162,600</td>
-          <td class="share">4.4%</td>
-          <td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:21%"></div></div></td>
-        </tr>
-        <tr>
-          <td class="rank">8</td>
-          <td><strong>上汽通用五菱</strong></td>
-          <td>上汽通用五菱汽车股份有限公司</td>
-          <td>广西柳州市</td>
-          <td class="sales">159,300</td>
-          <td class="share">4.3%</td>
-          <td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:21%"></div></div></td>
-        </tr>
-        <tr>
-          <td class="rank">9</td>
-          <td><strong>小米汽车</strong></td>
-          <td>小米汽车科技有限公司</td>
-          <td>北京市</td>
-          <td class="sales">150,300</td>
-          <td class="share">4.1%</td>
-          <td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:20%"></div></div></td>
-        </tr>
-        <tr>
-          <td class="rank">10</td>
-          <td><strong>蔚来汽车</strong></td>
-          <td>蔚来控股有限公司</td>
-          <td>安徽省合肥市</td>
-          <td class="sales">150,100</td>
-          <td class="share">4.1%</td>
-          <td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:20%"></div></div></td>
-        </tr>
+        <tr><td class="rank">1</td><td><strong>比亚迪</strong></td><td>比亚迪股份有限公司</td><td>广东 深圳</td><td class="sales">2,145,954</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></td></tr>
+        <tr><td class="rank">2</td><td><strong>吉利银河</strong><span class="tag-est">估</span></td><td>浙江吉利控股集团</td><td>浙江 杭州</td><td class="sales">~450,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:21%"></div></div></td></tr>
+        <tr><td class="rank">3</td><td><strong>奇瑞新能源</strong></td><td>奇瑞控股集团</td><td>安徽 芜湖</td><td class="sales">360,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:17%"></div></div></td></tr>
+        <tr><td class="rank">4</td><td><strong>极氪科技</strong></td><td>浙江吉利控股集团</td><td>浙江 宁波</td><td class="sales">244,877</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:11%"></div></div></td></tr>
+        <tr><td class="rank">5</td><td><strong>鸿蒙智行</strong><span class="tag-est">估</span></td><td>华为技术有限公司</td><td>广东 深圳</td><td class="sales">~230,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:11%"></div></div></td></tr>
+        <tr><td class="rank">6</td><td><strong>零跑汽车</strong></td><td>浙江零跑科技</td><td>浙江 杭州</td><td class="sales">221,664</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:10%"></div></div></td></tr>
+        <tr><td class="rank">7</td><td><strong>特斯拉中国</strong><span class="tag-est">估</span></td><td>特斯拉(上海)</td><td>上海</td><td class="sales">~220,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:10%"></div></div></td></tr>
+        <tr><td class="rank">8</td><td><strong>理想汽车</strong></td><td>北京车和家</td><td>北京</td><td class="sales">203,938</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:9.5%"></div></div></td></tr>
+        <tr><td class="rank">9</td><td><strong>小鹏汽车</strong></td><td>广州小鹏汽车</td><td>广东 广州</td><td class="sales">197,189</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:9.2%"></div></div></td></tr>
+        <tr><td class="rank">10</td><td><strong>上汽通用五菱</strong><span class="tag-est">估</span></td><td>上汽通用五菱汽车</td><td>广西 柳州</td><td class="sales">~191,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:8.9%"></div></div></td></tr>
+        <tr><td class="rank">11</td><td><strong>赛力斯</strong><span class="tag-est">估</span></td><td>赛力斯集团</td><td>重庆</td><td class="sales">~178,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:8.3%"></div></div></td></tr>
+        <tr><td class="rank">12</td><td><strong>长城新能源</strong><span class="tag-est">估</span></td><td>长城汽车股份</td><td>河北 保定</td><td class="sales">~171,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:8.0%"></div></div></td></tr>
+        <tr><td class="rank">13</td><td><strong>小米汽车</strong></td><td>小米汽车科技</td><td>北京</td><td class="sales">~150,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:7.0%"></div></div></td></tr>
+        <tr><td class="rank">14</td><td><strong>深蓝汽车</strong></td><td>重庆长安汽车</td><td>重庆</td><td class="sales">143,236</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:6.7%"></div></div></td></tr>
+        <tr><td class="rank">15</td><td><strong>广汽埃安</strong></td><td>广州汽车集团</td><td>广东 广州</td><td class="sales">125,136</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:5.8%"></div></div></td></tr>
+        <tr><td class="rank">16</td><td><strong>长安启源</strong><span class="tag-est">估</span></td><td>重庆长安汽车</td><td>重庆</td><td class="sales">~120,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:5.6%"></div></div></td></tr>
+        <tr><td class="rank">17</td><td><strong>上汽乘用车</strong><span class="tag-est">估</span></td><td>上海汽车集团</td><td>上海</td><td class="sales">~120,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:5.6%"></div></div></td></tr>
+        <tr><td class="rank">18</td><td><strong>蔚来汽车</strong></td><td>蔚来控股</td><td>安徽 合肥</td><td class="sales">114,150</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:5.3%"></div></div></td></tr>
+        <tr><td class="rank">19</td><td><strong>北汽新能源</strong></td><td>北汽蓝谷</td><td>北京</td><td class="sales">69,700</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:3.2%"></div></div></td></tr>
+        <tr><td class="rank">20</td><td><strong>阿维塔</strong></td><td>长安/华为/宁德时代</td><td>重庆</td><td class="sales">59,084</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:2.8%"></div></div></td></tr>
+        <tr><td class="rank">21</td><td><strong>岚图汽车</strong></td><td>东风汽车集团</td><td>湖北 武汉</td><td class="sales">55,128</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:2.6%"></div></div></td></tr>
+        <tr><td class="rank">22</td><td><strong>智界</strong></td><td>奇瑞/华为</td><td>安徽 芜湖</td><td class="sales">45,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:2.1%"></div></div></td></tr>
+        <tr><td class="rank">23</td><td><strong>欧拉</strong><span class="tag-est">估</span></td><td>长城汽车股份</td><td>河北 保定</td><td class="sales">~36,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:1.7%"></div></div></td></tr>
+        <tr><td class="rank">24</td><td><strong>魏牌</strong></td><td>长城汽车股份</td><td>河北 保定</td><td class="sales">~35,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:1.6%"></div></div></td></tr>
+        <tr><td class="rank">25</td><td><strong>一汽红旗</strong><span class="tag-est">估</span></td><td>中国第一汽车集团</td><td>吉林 长春</td><td class="sales">~30,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:1.4%"></div></div></td></tr>
+        <tr><td class="rank">26</td><td><strong>smart</strong><span class="tag-est">估</span></td><td>智马达(吉利/奔驰合资)</td><td>浙江 宁波</td><td class="sales">~25,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:1.2%"></div></div></td></tr>
+        <tr><td class="rank">27</td><td><strong>智己汽车</strong></td><td>上海汽车集团</td><td>上海</td><td class="sales">20,773</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:1.0%"></div></div></td></tr>
+        <tr><td class="rank">28</td><td><strong>东风风神</strong><span class="tag-est">估</span></td><td>东风汽车集团</td><td>湖北 武汉</td><td class="sales">~20,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:0.9%"></div></div></td></tr>
+        <tr><td class="rank">29</td><td><strong>极星</strong><span class="tag-est">估</span></td><td> Polestar(吉利/沃尔沃)</td><td>上海</td><td class="sales">~8,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:0.4%"></div></div></td></tr>
+        <tr><td class="rank">30</td><td><strong>哪吒汽车</strong><span class="tag-est">估</span></td><td>合众新能源</td><td>浙江 桐乡</td><td class="sales">~1,000</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:0.1%"></div></div></td></tr>
       </tbody>
     </table>
   </div>
 
-  <p>比亚迪以 76.64 万辆断层领跑,市场份额超 20%,近乎第 2-4 名之和;吉利汽车以 47.04 万辆稳居第二,同比暴增 135%,多品牌协同效应显著<sup><a href="#cite-2">[2]</a></sup>。第 4-10 名竞争胶着,销量在 15-19 万辆区间,鸿蒙智行、零跑、特斯拉、理想、五菱、小米、蔚来七家咬合紧密,排名随时可能变动。</p>
+  <p>比亚迪以 214.6 万辆断层领跑,接近第 2-5 名之和;吉利银河、奇瑞新能源分列二三位,传统车企新能源转型加速<sup><a href="#cite-5">[5]</a></sup><sup><a href="#cite-6">[6]</a></sup>。第 4-10 名销量在 19-24 万辆区间,极氪、鸿蒙智行、零跑、特斯拉、理想、小鹏、五菱咬合紧密,排名随时可能变动。小米汽车上半年交付已超 15 万辆,6 月 26 日上市的 YU7 锁单 24 万台,下半年有望冲击前 10<sup><a href="#cite-5">[5]</a></sup>。</p>
 
   <figure class="chart-figure">
-    <figcaption>图1:2026年1-5月新能源汽车车企累计销量对比(万辆)</figcaption>
-    <div id="chart-sales" style="width:100%;min-height:450px"></div>
+    <figcaption>图1:2026年上半年新能源汽车累计销量 TOP20 对比(万辆)</figcaption>
+    <div id="chart-sales" style="width:100%;min-height:600px"></div>
   </figure>
 </section>
 
-<!-- ===== 企业地理分布 ===== -->
 <section>
   <h2><span class="num">03</span>企业地理分布</h2>
-  <p>TOP10 车企总部分布在 <mark class="key">6 个省市</mark>,呈现明显的产业集聚特征。深圳与杭州各聚两家头部企业,北京吸引科技跨界玩家,长三角与珠三角仍是新能源产业的核心地带<sup><a href="#cite-4">[4]</a></sup>。</p>
+  <p>TOP30 车企总部分布在 <mark class="key">10 个省市</mark>,呈现明显的产业集聚特征。长三角与珠三角仍是新能源产业核心地带,重庆作为西部汽车重镇聚集多家车企<sup><a href="#cite-4">[4]</a></sup>。</p>
 
   <div class="geo-grid">
     <div class="geo-card">
-      <div class="city">广东省深圳市</div>
-      <div class="brands">比亚迪 / 鸿蒙智行(华为)</div>
-      <div class="count">合计份额 25.9% | 2 家企业</div>
+      <div class="city">广东(深圳/广州)</div>
+      <div class="brands">比亚迪、鸿蒙智行(华为)、广汽埃安</div>
+      <div class="count">3 家企业 | 合计份额超 30%</div>
     </div>
     <div class="geo-card">
-      <div class="city">浙江省杭州市</div>
-      <div class="brands">吉利汽车 / 零跑汽车</div>
-      <div class="count">合计份额 17.8% | 2 家企业</div>
+      <div class="city">浙江(杭州/宁波)</div>
+      <div class="brands">吉利银河、极氪科技、零跑汽车、smart</div>
+      <div class="count">4 家企业 | 合计份额约 25%</div>
     </div>
     <div class="geo-card">
-      <div class="city">北京市</div>
-      <div class="brands">理想汽车 / 小米汽车</div>
-      <div class="count">合计份额 8.5% | 2 家企业</div>
+      <div class="city">重庆</div>
+      <div class="brands">赛力斯、深蓝汽车、长安启源、阿维塔</div>
+      <div class="count">4 家企业 | 合计份额约 11%</div>
     </div>
     <div class="geo-card">
-      <div class="city">重庆市</div>
-      <div class="brands">长安汽车</div>
-      <div class="count">合计份额 6.9% | 1 家企业</div>
+      <div class="city">北京</div>
+      <div class="brands">理想汽车、小米汽车、北汽新能源</div>
+      <div class="count">3 家企业 | 合计份额约 8%</div>
     </div>
     <div class="geo-card">
-      <div class="city">上海市</div>
-      <div class="brands">特斯拉中国</div>
-      <div class="count">合计份额 5.0% | 1 家企业</div>
+      <div class="city">安徽(合肥/芜湖)</div>
+      <div class="brands">蔚来汽车、奇瑞新能源、智界</div>
+      <div class="count">3 家企业 | 合计份额约 10%</div>
     </div>
     <div class="geo-card">
-      <div class="city">广西柳州市</div>
-      <div class="brands">上汽通用五菱</div>
-      <div class="count">合计份额 4.3% | 1 家企业</div>
+      <div class="city">上海</div>
+      <div class="brands">特斯拉中国、上汽乘用车、智己汽车、极星</div>
+      <div class="count">4 家企业 | 合计份额约 7%</div>
     </div>
     <div class="geo-card">
-      <div class="city">安徽省合肥市</div>
-      <div class="brands">蔚来汽车</div>
-      <div class="count">合计份额 4.1% | 1 家企业</div>
+      <div class="city">湖北武汉</div>
+      <div class="brands">岚图汽车、东风风神</div>
+      <div class="count">2 家企业 | 东风集团旗下</div>
     </div>
-    <div class="geo-card" style="border-left-color:var(--accent2)">
-      <div class="city">区域分布特征</div>
-      <div class="brands">珠三角(深圳)领跑,长三角(杭州/上海)紧随,京津冀(北京)以科技企业为主,中西部(重庆/柳州/合肥)各有代表。</div>
+    <div class="geo-card">
+      <div class="city">其他地区</div>
+      <div class="brands">上汽通用五菱(广西柳州)、长城汽车(河北保定)、一汽红旗(吉林长春)、哪吒(浙江桐乡)</div>
+      <div class="count">4 家企业 | 各区域代表</div>
     </div>
   </div>
 
   <div class="callout">
-    <strong>特别说明:</strong>鸿蒙智行是华为旗下智能汽车品牌联盟,旗下问界、智界、享界、尊界分别由赛力斯(重庆)、奇瑞(芜湖)、北汽(北京)、江淮(合肥)制造,但品牌运营与销售由华为统一主导,故本报告将其归属为华为技术,总部记为深圳。
+    <strong>口径说明:</strong>极氪科技(极氪+领克)与吉利银河同属吉利控股集团但独立运营,分列统计。深蓝、阿维塔虽由长安参股,但有独立品牌运营与销量数据,分列统计。长城新能源含坦克新能源,魏牌与欧拉为长城子品牌但单独列出。鸿蒙智行旗下问界/智界/享界/尊界由不同车企制造,品牌统一由华为主导。
   </div>
 </section>
 
-<!-- ===== 数据说明 ===== -->
 <section>
   <h2><span class="num">04</span>数据说明</h2>
-  <h3>数据时效</h3>
-  <p>本报告数据截至 <mark class="key">2026 年 5 月</mark>。由于报告撰写日期为 2026 年 6 月 30 日,中汽协完整的 1-6 月(上半年)产销数据将于 7 月中旬正式发布,届时本榜单排名可能因 6 月冲刺销量而发生变动。本报告以目前可得的最新累计数据(1-5 月)为基准。</p>
+  <h3>数据时效与口径</h3>
+  <p>本榜单数据区间为 <mark class="key">2026 年 1-6 月</mark>(上半年)。确切数据(无标记)来自车企官方 6 月交付快报;标记 <span class="tag-est">估</span> 的为基于 1-5 月累计与 5 月月度数据推算的估算值,实际数据以车企后续发布为准。榜单综合批发与交付两种口径,不同车企口径可能存在差异。</p>
 
-  <h3>数据口径</h3>
-  <p>本报告同时引用两种口径的数据:<strong>批发口径</strong>(中汽协,含出口)与<strong>零售口径</strong>(乘联会,国内终端上牌)。市场概览部分采用中汽协批发数据,TOP10 排行榜采用乘联会零售口径,两者在总量上存在差异(批发 > 零售),主要差额来自出口与渠道库存。阅读时请注意区分。</p>
+  <h3>数据来源</h3>
+  <p>市场总量数据来自中国汽车工业协会 6 月 10 日发布的 1-5 月产销数据<sup><a href="#cite-1">[1]</a></sup>。车企销量来自多家媒体 7 月 1 日发布的 6 月交付快报汇总<sup><a href="#cite-5">[5]</a></sup>。5 月厂商排名来自乘联会批发数据<sup><a href="#cite-7">[7]</a></sup>。奇瑞上半年数据来自奇瑞集团官方公布<sup><a href="#cite-6">[6]</a></sup>。车企总部信息来自汽车之家整理<sup><a href="#cite-4">[4]</a></sup>。</p>
 
-  <h3>市场份额</h3>
-  <p>TOP10 表中的市场份额基于新能源乘用车零售总量(约 370 万辆)计算,非汽车总销量口径。比亚迪 20.7% 的份额指其在新能源乘用车零售市场的占比。</p>
+  <h3>排名说明</h3>
+  <p>第 1-22 名有确切或接近确切的 1-6 月累计数据支撑;第 23-30 名部分为基于月度趋势的估算,仅供趋势参考,不代表精确排名。完整精确数据预计 7 月中旬由中汽协发布后可更新。</p>
 </section>
 
-<!-- ===== Sources ===== -->
 <footer>
   <div class="sources">
     <h2>数据来源</h2>
@@ -551,16 +485,28 @@ sup a:hover { text-decoration: underline; }
         <a class="src-url" href="http://m.toutiao.com/group/7649672329328443967/" target="_blank" rel="noopener">http://m.toutiao.com/group/7649672329328443967/</a>
       </li>
       <li id="cite-2">
-        <span class="src-title">2026年5月新能源汽车销量排行深度解析。5月新能源汽车销量149.6万辆,渗透率56.9%,比亚迪376,930辆断层领跑。</span>
+        <span class="src-title">2026年5月新能源汽车销量排行深度解析。5月新能源销量149.6万辆,渗透率56.9%。</span>
         <a class="src-url" href="http://m.toutiao.com/group/7655767091206685236/" target="_blank" rel="noopener">http://m.toutiao.com/group/7655767091206685236/</a>
       </li>
       <li id="cite-3">
-        <span class="src-title">2026年1-5月新能源车企累计销量TOP 10。比亚迪76.64万辆(20.7%)、吉利47.04万辆(12.7%)、长安25.48万辆(6.9%)等。</span>
+        <span class="src-title">2026年1-5月新能源车企累计销量TOP10。比亚迪76.64万辆(20.7%)、吉利47.04万辆(12.7%)等零售数据。</span>
         <a class="src-url" href="http://m.toutiao.com/group/7656339694195687987/" target="_blank" rel="noopener">http://m.toutiao.com/group/7656339694195687987/</a>
       </li>
       <li id="cite-4">
-        <span class="src-title">国内各大车企总部所在地一览。涵盖比亚迪(深圳)、吉利(杭州)、长安(重庆)、小米(北京)、蔚来(合肥)等车企总部地理信息。</span>
+        <span class="src-title">国内各大车企总部所在地一览。涵盖比亚迪(深圳)、吉利(杭州)、长安(重庆)等车企总部地理信息。</span>
         <a class="src-url" href="https://chejiahao.autohome.com.cn/info/18091639" target="_blank" rel="noopener">https://chejiahao.autohome.com.cn/info/18091639</a>
+      </li>
+      <li id="cite-5">
+        <span class="src-title">15家新能源车企6月销量出炉。比亚迪1-6月2145954辆、零跑221664辆、极氪科技244877辆、理想203938辆、小鹏197189辆等车企1-6月累计交付数据。</span>
+        <a class="src-url" href="http://m.toutiao.com/group/7522065872345711142/" target="_blank" rel="noopener">http://m.toutiao.com/group/7522065872345711142/</a>
+      </li>
+      <li id="cite-6">
+        <span class="src-title">奇瑞公布上半年销量。奇瑞集团上半年累计126万辆,新能源累计36万辆,同比增长98.6%;智界上半年累计4.5万辆。</span>
+        <a class="src-url" href="http://m.toutiao.com/group/7524165134197981705/" target="_blank" rel="noopener">http://m.toutiao.com/group/7524165134197981705/</a>
+      </li>
+      <li id="cite-7">
+        <span class="src-title">2026年5月乘用车厂商销量排名深度解析。5月批发TOP10厂商排名,含吉利银河8.17万辆、长城新能源3.04万辆、上汽乘用车等数据。</span>
+        <a class="src-url" href="http://m.toutiao.com/group/7655758417646141987/" target="_blank" rel="noopener">http://m.toutiao.com/group/7655758417646141987/</a>
       </li>
     </ol>
   </div>
@@ -568,7 +514,6 @@ sup a:hover { text-decoration: underline; }
 
 </div>
 
-<!-- ===== ECharts ===== -->
 <script src="./_shared/js/echarts.min.js"></script>
 <script src="assets/charts.js"></script>
 
